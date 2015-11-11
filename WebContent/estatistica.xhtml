@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+	    <ui:define name="content">
+	    	<b:container>
+	    		<b:row>
+	    			<b:column col-md="8">
+		    			<h3>Estatísticas gerais dos alunos</h3>
+		    				<b:row style="text-align: center;">
+		    					<b:column span="6">
+		    						<b:panel look="success">
+		    							<b:row>
+		    								<b:column><h:outputText value="Quantidade de alunos em Mestrado"/></b:column>
+		    								<b:column><h1>34</h1></b:column>
+		    							</b:row>
+		    						</b:panel>
+		    					</b:column>
+		    					<b:column span="6">
+		    						<b:panel look="info">
+		    							<b:row>
+		    								<b:column><h:outputText value="Quantidade de alunos em Doutorado"/></b:column>
+		    								<b:column><h1>21</h1></b:column>
+		    							</b:row>
+		    						</b:panel>
+		    					</b:column>
+		    				</b:row>
+		    				<b:row style="text-align: center;">
+		    					<b:column span="6">
+		    						<b:panel look="danger">
+		    							<b:row>
+		    								<b:column><h:outputText value="Defesas concluídas"/></b:column>
+		    								<b:column><h1>64</h1></b:column>
+		    							</b:row>
+		    						</b:panel>
+		    					</b:column>
+		    					<b:column span="6">
+		    						<b:panel look="warning">
+		    							<b:row>
+		    								<b:column><h:outputText value="Artigos publicados"/></b:column>
+		    								<b:column><h1>666</h1></b:column>
+		    							</b:row>
+		    						</b:panel>
+		    					</b:column>
+		    				</b:row>
+		    			</b:column>
+					<b:column col-md="4">
+						<b:panel look="info" collapsible="false">
+        				    <f:facet name="heading"><h4><b:iconAwesome name="group"/> Acadêmicos</h4></f:facet>   
+        					<p>Lucas Adiers Sefanello <b:label text="12201016" severity="info"/></p>
+        					<p>Raphael Martins <b:label text="12201016" severity="info"/></p>
+        					<p>Robson de Carvalho <b:label text="12201016" severity="info"/></p>					    
+						 </b:panel>
+					</b:column>
+	        	</b:row>
+	    	</b:container>
+    	</ui:define>
+	</ui:composition>
+</html>

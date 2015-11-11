@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+	<ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+	    <ui:define name="content">
+	    	<b:container>
+	        	<b:row>
+		            <b:column col-md="8">
+		            	<h3>Registro de alunos</h3>
+		           		<b:panel>
+		                <h:form>
+		                	<b:messages id="messages" />
+		                    <b:inputText value="#{controller.aluno.nome}">Informe seu nome:</b:inputText>
+		                    <b:inputText value="#{controller.aluno.idade}" >Informe sua idade:</b:inputText>            
+		                    <b:inputText value="#{controller.aluno.cpf}" >CPF</b:inputText>
+		                    <b:inputText value="#{controller.aluno.data}" >Data de início</b:inputText>
+		                    <b:inputText value="#{controller.aluno.professor}">Professor orientador</b:inputText>
+		                    <b:inputText value="#{controller.aluno.laboratorio}">Laboratório de pesquisa</b:inputText>
+		                    <h2>Formação</h2>
+		                    <b:selectOneMenu value="#{controller.aluno.formacao}">
+		                        <f:selectItem itemLabel="Mestrado" itemValue="Mestrado"/>
+		                        <f:selectItem itemLabel="Doutorado" itemValue="Mestrado"/>
+		                    </b:selectOneMenu>
+		                    <h2>Proficiencia</h2>
+		                    <b:selectOneMenu value="#{controller.aluno.proeficiencia}">
+		                        <f:selectItem itemLabel="Inglês" itemValue="Francês"/>
+		                        <f:selectItem itemLabel="Francês" itemValue="Francês"/>
+		                        <f:selectItem itemLabel="Alemão" itemValue="Alemão"/>
+		                        <f:selectItem itemLabel="Italiano" itemValue="Italiano"/>
+		                    </b:selectOneMenu>
+		                    <h2>Exame de qualificação</h2>
+		                    <b:selectOneMenu value="#{controller.aluno.exameQualificacao}">
+		                        <f:selectItem itemLabel="Aprovado" itemValue="Aprovado"/>
+		                        <f:selectItem itemLabel="Aprovado com pendências" itemValue="Aprovado com pendências"/>
+		                        <f:selectItem itemLabel="Reprovado" itemValue="Reprovado"/>
+		                    </b:selectOneMenu>
+		                    <h2>Publicações</h2>
+		                    <h3>Artigo em evento</h3>
+		                    <b:row>
+		                        <b:column col-md="6">
+		                            <b:inputText value="#{controller.aluno.artigo.nome}">Nome: </b:inputText>
+		                        </b:column>
+		                        <b:column col-md="6">
+		                            <b:inputText value="#{controller.aluno.artigo.qualis}">Qualis: </b:inputText>
+		                        </b:column>
+		                    </b:row>
+		                    <b:row>
+		                        <b:column col-md="6">
+		                            <b:inputText value="#{controller.aluno.artigo2.nome}">Nome: </b:inputText>
+		                        </b:column>
+		                        <b:column col-md="6">
+		                            <b:inputText value="#{controller.aluno.artigo2.qualis}">Qualis: </b:inputText>
+		                        </b:column>
+		                    </b:row>	
+		                    <h3>Artigo em periódico</h3>
+		                    <b:row>
+		                        <b:column col-md="6">
+		                            <b:inputText value="#{controller.aluno.artigoperiodico.nome}">Nome: </b:inputText>
+		                        </b:column>
+		                        <b:column col-md="6">
+		                            <b:inputText value="#{controller.aluno.artigoperiodico.qualis}">Qualis: </b:inputText>
+		                        </b:column>
+		                    </b:row>
+		                    <b:row>
+		                        <b:column col-md="6">
+		                            <b:inputText value="#{controller.aluno.artigoperiodico2.nome}">Nome: </b:inputText>
+		                        </b:column>
+		                        <b:column col-md="6">
+		                            <b:inputText value="#{controller.aluno.artigoperiodico2.qualis}">Qualis: </b:inputText>
+		                        </b:column>
+		                    </b:row>
+		                    <h2>Estágio docência</h2>
+		                    <b:inputText>Nome da disciplina</b:inputText>
+		                    <b:inputText>Carga horária</b:inputText>
+		                    <h2>Defesa de mestrado</h2>
+		                    <b:selectOneMenu value="#{controller.aluno.defesa}">
+		                        <f:selectItem itemLabel="Aprovado" itemValue="Aprovado"/>
+		                        <f:selectItem itemLabel="Aprovado com pendências" itemValue="Aprovado com pendências"/>
+		                        <f:selectItem itemLabel="Reprovado" itemValue="Reprovado"/>
+		                    </b:selectOneMenu>
+		                    <h2>Defesa de doutorado</h2>
+		                    <b:selectOneMenu value="#{controller.aluno.defesa}">
+		                        <f:selectItem itemLabel="Aprovado" itemValue="Aprovado"/>
+		                        <f:selectItem itemLabel="Aprovado com pendências" itemValue="Aprovado com pendências"/>
+		                        <f:selectItem itemLabel="Reprovado" itemValue="Reprovado"/>
+		                    </b:selectOneMenu>
+		                    <b:commandButton size="lg" look="info" value="Cadastrar" action="#{controller.cadastraUsuario()}" update="messages">  
+		                    </b:commandButton>
+		                </h:form>
+		                </b:panel>
+		            </b:column>
+		            <b:column col-md="4">
+							<b:panel look="info" collapsible="false">
+	        				    <f:facet name="heading"><h4><b:iconAwesome name="group"/> Acadêmicos</h4></f:facet>   
+	        					<p>Lucas Adiers Sefanello <b:label text="12201016" severity="info"/></p>
+	        					<p>Raphael Martins <b:label text="12201016" severity="info"/></p>
+	        					<p>Robson de Carvalho <b:label text="12201016" severity="info"/></p>					    
+							 </b:panel>
+						</b:column>
+		        </b:row>
+			</b:container>
+    	</ui:define>
+	</ui:composition>
+</html>

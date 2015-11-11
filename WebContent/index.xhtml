@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <ui:composition template="/WEB-INF/templates/BasicTemplate.xhtml">
+	    <ui:define name="content">
+	    	<b:container>
+	    		<b:row>
+	    			<b:column col-md="8">
+    					<h3>Sistema para gerenciamento de alunos de pós-graduação</h3>
+    					<b:panel>
+    					<h:form>
+            				<b:inputText value="#{controller.cpf}">Informe seu nome:</b:inputText>
+            				<b:commandButton size="lg" look="info" value="Cadastrar" action="#{controller.getAlunoByCpf()}">  
+           					</b:commandButton>
+        				</h:form>
+        				</b:panel>
+        			</b:column>
+        			<b:column col-md="4">
+        				<b:panel look="info" collapsible="false">
+        				    <f:facet name="heading"><h4><b:iconAwesome name="group"/> Acadêmicos</h4></f:facet>   
+        					<p>Lucas Adiers Sefanello <b:label text="12201016" severity="info"/></p>
+        					<p>Raphael Martins <b:label text="12201016" severity="info"/></p>
+        					<p>Robson de Carvalho <b:label text="12201016" severity="info"/></p>					    
+						 </b:panel>
+        			</b:column>
+        		</b:row>
+    		</b:container>
+    	</ui:define>
+	</ui:composition>
+</html>
